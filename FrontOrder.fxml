@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzaProject.FXMLFrontOrderController">
+   <children>
+      <ImageView fx:id="Pizza" fitHeight="172.0" fitWidth="285.0" layoutX="21.0" layoutY="153.0" onMouseClicked="#pizzaClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@150526103052-pizza-hut-natural-780x439.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Drinks" fitHeight="162.0" fitWidth="263.0" layoutX="320.0" layoutY="154.0" onMouseClicked="#drinkClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@drink.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="93.0" text="What would you like to Order today?">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="121.0" text="Signature Pizzas">
+         <font>
+            <Font name="Comic Sans MS" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="376.0" layoutY="121.0" text="Refreshing Drinks">
+         <font>
+            <Font name="Comic Sans MS" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="14.0" text="&quot;The Pizza Shop&quot;">
+         <font>
+            <Font name="Comic Sans MS Bold" size="38.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="Checkout" fitHeight="88.0" fitWidth="93.0" layoutX="495.0" layoutY="333.0" onMouseClicked="#checkoutClick" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@checkout-dark.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="216.0" layoutY="56.0" text="Love at first slice" textFill="#f22b2b">
+         <font>
+            <Font name="Comic Sans MS Italic" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

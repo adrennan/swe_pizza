@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzaProject.FXMLDrinkController">
+   <children>
+      <Label layoutX="225.0" layoutY="14.0" text="PICK YOUR DRINK">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="60.0" text="Choose Size">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="137.0" text="Choose Drink">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Label>
+      <HBox layoutX="57.0" layoutY="167.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <RadioButton fx:id="Coke" mnemonicParsing="false" selected="true" text="Coke">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="dType" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pizzas/coke.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <RadioButton fx:id="Sprite" alignment="CENTER_LEFT" graphicTextGap="3.0" minWidth="-Infinity" mnemonicParsing="false" text="Sprite" textOverrun="CLIP" toggleGroup="$dType">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pizzas/sprite.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <RadioButton fx:id="mDew" minWidth="-Infinity" mnemonicParsing="false" text="Mt. Dew" toggleGroup="$dType">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pizzas/mtdew.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox minWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <RadioButton fx:id="dPepper" mnemonicParsing="false" text="Dr Pepper" toggleGroup="$dType">
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pizzas/drpepper.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <RadioButton fx:id="Small" layoutX="60.0" layoutY="94.0" mnemonicParsing="false" selected="true" text="Small">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="dSize" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Medium" layoutX="130.0" layoutY="94.0" mnemonicParsing="false" text="Medium" toggleGroup="$dSize">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="Large" layoutX="214.0" layoutY="94.0" mnemonicParsing="false" text="Large" toggleGroup="$dSize">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </RadioButton>
+      <ImageView fx:id="Checkout" fitHeight="90.0" fitWidth="110.0" layoutX="353.0" layoutY="295.0" onMouseClicked="#checkoutClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@checkout-dark.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="MoreFood" fitHeight="38.0" fitWidth="157.0" layoutX="443.0" layoutY="321.0" onMouseClicked="#orderMore" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pizzas/orderPizza.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="372.0" layoutY="295.0" text="Checkout">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="399.0" layoutY="108.0" prefHeight="117.0" prefWidth="175.0" text="Small - $1.50          Medium - $2.00      Large - $2.50" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="461.0" layoutY="148.0" opacity="0.43" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
